@@ -7,7 +7,7 @@ USE project;
 -- Select initial data to start with
 
 Select * FROM global_data
-WHERE CountryName IS NOT NULL
+WHERE GDPDollars AND MilitarySpendingDollars IS NOT NULL
 ORDER BY 1,2;
 
 -- Shows most populous countries to least populous
