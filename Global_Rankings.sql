@@ -6,7 +6,9 @@ USE project;
 
 -- Select initial data to start with
 
-Select * FROM global_data;
+Select * FROM global_data
+WHERE CountryName IS NOT NULL
+ORDER BY 1,2;
 
 -- Shows most populous countries to least populous
 
@@ -69,8 +71,3 @@ Inner JOIN global_co2
 ON global_data.CountryName= global_co2.CountryName
 WHERE CO2_KT IS NOT NULL
 ORDER BY PollutionQuotient DESC;
-
--- Shows view
-
-SELECT * 
-FROM PollutionPerCapita;
